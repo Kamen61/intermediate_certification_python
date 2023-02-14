@@ -6,6 +6,12 @@ class Controller:
         self.json = JsonModul
         self.view = View
 
+    def menu(self):
+        return self.view.comands()
+
+    def bad_menu_index(self):
+        self.view.index_menu()
+
     def create_note(self):
         self.json.add_note(Note(self.view.input_title_note(), self.view.input_text_note()))
         self.view.completed_add()
